@@ -1,0 +1,119 @@
+article {
+    border-top: none !important;
+}
+
+#__next {
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+.main-content {
+    padding-left: 0;
+
+    @media only screen and (max-width: $breakpoint) {
+        padding-right: 0 !important;
+    }
+}
+
+body {
+    background-color: none;
+    &:before {
+        content: "";
+        height: 10px;
+        background: linear-gradient(to right, $green, $blue);
+        display: block;
+        @media only screen and (max-width: $breakpoint) {
+            display: none;
+        }
+    }
+    &:after {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        content: "";
+        height: 63px;
+        display: block;
+        z-index: 1;
+        border-bottom: 2px solid $grey;
+        pointer-events: none;
+        @media only screen and (max-width: $breakpoint) {
+            display: none;
+        }
+    }
+}
+
+a {
+    color: $icon-blue;
+}
+
+main {
+    border-right: 2px solid $grey !important;
+    padding-right: 1em;
+    @media only screen and (max-width: $breakpoint) {
+        border: none !important;
+    }
+}
+
+nav {
+    border-bottom: 2px solid $grey !important;
+    margin-bottom: 0 !important;
+    @media only screen and (max-width: $breakpoint) {
+        background: linear-gradient(to right, $green, $blue) !important;
+        border: none !important;
+    }
+
+    .navbar-brand {
+        @media only screen and (max-width: $breakpoint) {
+            background-image: url(https://pikurate.now.sh/static/mobile-logo.png);
+            position: absolute;
+            left: 48%;
+            top: 15px;
+        }
+        background-image: url(https://pikurate.now.sh/static/pikurate.png);
+        width: 200px;
+        background-repeat: no-repeat;
+        i {
+            display: none;
+        }
+        position: relative;
+        top: 5px;
+        left: .5em;
+    }
+    ul {
+        text-transform: uppercase;
+    }
+    @media only screen and (max-width: $breakpoint) {
+        .navbar-collapse {
+            padding: 0em;
+        }
+        .navbar-right {
+            background: white;
+            margin: 0;
+            border-bottom: 1px solid $grey;
+        }
+    }
+
+    button {
+        border: none !important;
+        float: left !important;
+        &:hover {
+            background-color: transparent !important;
+        }
+        @media only screen and (max-width: $breakpoint) {
+            float: left;
+            padding-left: 1.5em;
+            .icon-bar {
+                background-color: white !important;
+            }
+            border: none !important;
+        }
+        &:hover {
+            background: red;
+        }
+    }
+}
+
+.text-muted {
+    color: $medium-grey;
+}

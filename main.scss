@@ -1,0 +1,14 @@
+$green: #96bb33;
+$blue: #0067ab;
+$grey: #ebebeb;
+$icon-blue: #29abe1;
+$dark-grey: #666666;
+$medium-grey: #999999;
+$black: #333333;
+$breakpoint: 768px;
+
+@import 'global.scss';
+@import 'search-menu.scss';
+@import 'post.scss';
+@import 'journey.scss';
+@import 'my-journey.scss';

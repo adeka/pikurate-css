@@ -1,0 +1,70 @@
+.SearchMenu {
+    margin: -15px;
+    margin-top: 0px;
+
+    .form-group {
+        margin: 0;
+    }
+
+    fieldset {
+        border-bottom: 1px solid $grey;
+        width: 100%;
+        .field:first-child {
+            padding: 0;
+            height:53px;
+            border-bottom: 2px solid $grey;
+            &:before {
+                content: "\f002";
+                font-family: FontAwesome;
+                display: block;
+                height:50px;
+                position: absolute;
+                z-index: 1;
+                color: $icon-blue;
+                padding: 1em;
+            }
+            input {
+                border: none;
+                height: 30px;
+                padding-left: 7px;
+                margin-left: 2em;
+                height: 50px;
+                outline: none;
+                box-shadow: none;
+            }
+            label {
+                display: none;
+            }
+        }
+        .field {
+            margin: 0;
+            padding: 1em;
+            label {
+                position: relative;
+                left: 7px;
+                color: $dark-grey;
+                font: -webkit-control;
+                text-transform: uppercase;
+            }
+            select {
+                border: none;
+                box-shadow: none;
+                border-bottom: 1px solid $grey;
+                border-radius: 0;
+                color: $green;
+                display: inline-block;
+                width: auto;
+            }
+        }
+    }
+    button {
+        margin: 1em;
+        background: none;
+        color: $icon-blue;
+        border: none;
+        &:hover {
+            color: $icon-blue;
+            background: transparentize($icon-blue, .9);
+        }
+    }
+}

@@ -1,0 +1,94 @@
+header {
+    // padding: 1em;
+    // background: $grey;
+}
+.AccountPage__photo {
+    display: block;
+    width: 150px;
+    height: 150px;
+    float: left;
+    margin-right: 1em;
+}
+.JourneyComponent__Journey {
+    width: 47%;
+    float: left;
+    border: 2px solid $grey;
+    margin: .5em;
+    header {
+        display: block;
+        border-bottom:  2px solid $grey;
+        padding: 1em;
+        overflow: auto;
+        .JourneyComponent__Journey-title {
+            float: left;
+        }
+        .JourneyComponent__Journey-buttons {
+            float: right;
+            a {
+                width: 30px;
+                display: inline-block;
+                color: white;
+                cursor: pointer;
+                &:before {
+                    content: "\f040";
+                    font-family: FontAwesome;
+                    display: block;
+                    position: absolute;
+                    z-index: 1;
+                    color: $dark-grey;
+                    padding-left: .5em;
+                    &:hover {
+                        color: $icon-blue;
+                    }
+                }
+            }
+            span {
+                width: 30px;
+                display: inline-block;
+                color: white;
+                cursor: pointer;
+                &:before {
+                    content: "\f1f8";
+                    font-family: FontAwesome;
+                    display: block;
+                    position: absolute;
+                    z-index: 1;
+                    color: $dark-grey;
+                    padding-left: .5em;
+                }
+            }
+        }
+    }
+    section {
+        overflow: auto;
+        padding: 1em;
+        .JourneyComponent__Journey-photo {
+            // background-image: url(http://via.placeholder.com/300x300) !important;
+            background-size: cover;
+            background-position: center;
+            width: 40%;
+            float: left;
+            height: 150px;
+            display: block;
+
+        }
+        .JourneyComponent__Journey-info {
+            padding-left: 1em;
+            display: block;
+            width: 60%;
+            float: left;
+            span {
+                display: block;
+            }
+            .JourneyComponent__Journey-created {
+                margin-top: 2em;
+                color: $medium-grey;
+            }
+        }
+    }
+    footer {
+        padding: .5em;
+        display: block;
+        border-top: 2px solid $grey;
+    }
+}

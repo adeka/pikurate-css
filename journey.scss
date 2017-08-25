@@ -1,0 +1,223 @@
+.JourneyPage__title {
+    font-size: 30px;
+}
+
+.JourneyPage__author {
+    padding-right: .3em;
+    font: -webkit-control;
+    font-size: 1em;
+}
+
+.JourneyPage__date {
+    color: $medium-grey;
+    font: -webkit-control;
+    font-size: 1em;
+}
+
+.JourneyPage__buttons {
+    padding-bottom: .5em;
+    margin-bottom: 1em;
+    border-bottom: 2px solid $grey;
+    overflow: visible;
+    height: 28px;
+    position: relative;
+    .JourneyPage__buttons-left {
+        float: left;
+        button {
+            border: none;
+            background: none;
+            i {
+                color: $icon-blue;
+                padding-right: .25em;
+            }
+            color: $medium-grey;
+            margin-right: 1em;
+            &:hover {
+                background: transparentize($grey, .5);
+            }
+        }
+        @media only screen and (max-width: $breakpoint) {
+            background: white;
+            float: none;
+            position: absolute;
+            top: 70px;
+            right: 20px;
+            width: 10%;
+            button {
+                margin-bottom: 1.5em;
+                color: transparent !important;
+                &:hover {
+                    background: white !important;
+                    i {
+                        color: lighten($icon-blue, 20%) !important;
+                    }
+                }
+                i {
+                    font-size: 2em;
+                }
+            }
+        }
+    }
+
+    .JourneyPage__buttons-right {
+        float: right;
+        padding-right: 1em;
+        @media only screen and (max-width: $breakpoint) {
+            float: left;
+        }
+        span:nth-child(1) {
+            i {
+                display: none;
+            }
+            color: $medium-grey;
+            padding-left: 1.5em;
+            padding-right: 2em;
+            position: relative;
+            &:before {
+                content: "\f06e";
+                font-family: FontAwesome;
+                position: absolute;
+                left: 0;
+                color: $icon-blue;
+            }
+        }
+        span:nth-child(2) {
+            i {
+                display: none;
+            }
+            color: $medium-grey;
+            padding-left: 1.5em;
+            position: relative;
+            &:before {
+                content: "\f08a";
+                font-family: FontAwesome;
+                position: absolute;
+                left: 0;
+                color: $icon-blue;
+            }
+        }
+    }
+}
+
+
+
+.JourneyPage__recommended {
+    overflow: auto;
+    padding-bottom: 1em;
+    .JourneyPage__buy {
+        width: 40%;
+        @media only screen and (max-width: $breakpoint) {
+            width: 85%;
+            padding-right: 1em;
+        }
+        float: left;
+        a {
+            max-width: initial !important;
+            display: block !important;
+            width: 100%;
+            border: 1px solid $grey;
+            margin-bottom: 1em;
+            background-size: cover !important;
+            background-position: center !important;
+        }
+        .JourneyPage__buy-now-button {
+            background: $icon-blue;
+            color: white;
+            width: 100%;
+            display: block;
+            text-align: center;
+            padding-top: .5em;
+            padding-bottom: .5em;
+            border-radius: 5px;
+            &:hover {
+                background: darken($icon-blue, 5%);
+                text-decoration: none;
+            }
+        }
+    }
+    .JourneyPage__info {
+        width: 60%;
+        float: right;
+        padding-left: 2em;
+        padding-right: 2em;
+        @media only screen and (max-width: $breakpoint) {
+            width: 100%;
+            padding-left: 1em;
+        }
+        .JourneyPage__recommended-title {
+            color: $black;
+            font-size: 1.5em;
+            display: block;
+        }
+        .JourneyPage__recommended-price {
+            color: $green;
+            font-size: 1.25em;
+        }
+    }
+}
+
+.panel {
+    margin-right: 1em;
+    .panel-heading {
+        background: white;
+        box-shadow: none;
+        color: $dark-grey;
+    }
+    box-shadow: none;
+}
+
+.JourneyPage__product {
+    width: 300px;
+    margin: 1em;
+    .JourneyPage__product-image {
+        width: 100%;
+        height: 120px;
+        margin: auto;
+    }
+    .JourneyPage__product-title {
+        color: $black;
+        font-size: 1em;
+        line-height: 1em;
+        display: block;
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+    .JourneyPage__product-price {
+        color: $green;
+        display: block;
+    }
+    .JourneyPage__product-rating {
+        display: block;
+    }
+}
+.JourneyPage__link {
+    a {
+        display: block;
+    }
+    .JourneyPage__link-comment {
+        color: $dark-grey;
+        background: $grey;
+        display: inline-block;
+        padding: 1em;
+        padding-top: .5em;
+        padding-bottom: .5em;
+        margin-top: .5em;
+        margin-bottom: 1em;
+        border-radius: 5px;
+        position: relative;
+        &:before {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-bottom: 5px solid $grey;
+            top: -4px;
+        }
+    }
+}
+
+.JourneyCategories {
+    margin-top: 1em;
+}
