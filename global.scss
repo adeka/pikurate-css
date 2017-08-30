@@ -3,7 +3,6 @@ article {
 }
 
 #__next {
-    max-width: 1200px;
     margin: auto;
 }
 
@@ -18,6 +17,7 @@ article {
 
 body {
     background-color: none;
+    overflow-x: hidden;
     &:before {
         content: "";
         height: 10px;
@@ -116,4 +116,113 @@ nav {
 
 .text-muted {
     color: $medium-grey;
+}
+
+.Share {
+  a.share {
+    color: $medium-grey;
+    position: relative;
+    padding-left: 1.5em;
+    &:before {
+      content: "\f045";
+      font-family: FontAwesome;
+      position: absolute;
+      left: 0;
+      color: $icon-blue;
+    }
+  }
+  .modal-body {
+    a {
+      color: white;
+      text-transform: uppercase;
+      font-weight: 700;
+      width: 100%;
+      max-width: 300px;
+      margin-bottom: 1em;
+    }
+    a.btn-facebook {
+			background: $facebook-blue;
+		}
+		a.btn-twitter {
+			background: $twitter-blue;
+		}
+		a.btn-linkedin {
+			background: $linkedin-blue;
+		}
+		a.btn-email {
+			background: $dark-grey;
+      margin-bottom: 0;
+		}
+  }
+}
+
+.rating {
+  color: $medium-grey;
+  padding-left: 1em;
+
+  .rating__dot {
+    padding-left: 0.125em;
+    padding-right: 0.125em;
+    color: $icon-blue;
+
+    &:before {
+      content: "\f1db";
+      font-family: FontAwesome;
+    }
+    &.fill, &.rated {
+      &:before {
+        content: "\f111";
+      }
+    }
+  }
+  .rating__count {
+    padding-left: 0.25em;
+  }
+}
+
+.views {
+  i {
+    display: none;
+  }
+  color: $medium-grey;
+  padding-left: 1.5em;
+  padding-right: 2em;
+  position: relative;
+  &:before {
+    content: "\f06e";
+    font-family: FontAwesome;
+    position: absolute;
+    left: 0;
+    color: $icon-blue;
+  }
+}
+
+.likes {
+  i {
+    display: none;
+  }
+  color: $medium-grey;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  position: relative;
+  &:before {
+    content: "\f08a";
+    font-family: FontAwesome;
+    position: absolute;
+    left: 0;
+    color: $icon-blue;
+  }
+}
+
+.saves {
+  color: $medium-grey;
+  padding-left: 1.5em;
+  position: relative;
+  &:before {
+    content: "\f234";
+    font-family: FontAwsome;
+    position: absolute;
+    left: 0;
+    color: $icon-blue;
+  }
 }

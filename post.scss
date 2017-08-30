@@ -1,19 +1,24 @@
 .SearchPage__result {
-    height: 500px;
+    height: 515px;
     padding-top: .5em;
     @media only screen and (max-width: $breakpoint) {
         padding-right: 10px;
         padding-left: 0;
     }
+    .SearchPage__result-badge {
+      color: $green;
+      line-height: 1em;
+      font-size: 1em;
+      font-weight: bold;
+    }
     // title
-    div a:first-child {
+    .SearchPage__result-title {
         color: $black;
         font-size: 1.5em;
         text-decoration: none;
-
     }
     // image
-    & > a {
+    .SearchPage__result-recommended-image {
         background-size: cover !important;
         background-position: center;
         min-height: 210px;
@@ -22,34 +27,39 @@
         margin-top: .5em;
         background-origin: content-box;
         max-width: initial !important;
+        background-repeat: no-repeat;
     }
 
     transition: .2s all;
     &:hover {
         background: transparentize(#999, .95);
-        cursor: pointer;
         // transform: scale(1.01,1.01);
     }
     // description
     .SearchPage__result-description {
         height: 100px;
         overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 5;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
     }
     // tags
     .SearchPage__tag-list {
         margin-top: 1em;
         border-top: 1px solid $grey;
         border-bottom: 1px solid $grey;
-        padding-bottom: 1em;
-        &:after {
-            content: "Categories ( 9 )";
-            color: $icon-blue;
+        ul {
+          list-style: none;
+          padding: 0;
+          padding-top: 1em;
+          color: $blue;
         }
     }
     // stats
     .SearchPage__result-buttons, .JourneyPage__buttons-right {
         margin-top: 1em;
-        span:nth-child(1) {
+        .SearchPage__views {
             padding-left: 1.5em;
             padding-right: 2em;
             position: relative;
@@ -61,8 +71,9 @@
                 color: $icon-blue;
             }
         }
-        span:nth-child(2) {
-            padding-left: 1.5em;
+        .SearchPage__likes {
+          padding-left: 1.5em;
+          padding-right: 2em;
             position: relative;
             &:before {
                 content: "\f08a";

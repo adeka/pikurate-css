@@ -2,7 +2,6 @@ article {
   border-top: none !important; }
 
 #__next {
-  max-width: 1200px;
   margin: auto; }
 
 .main-content {
@@ -12,7 +11,8 @@ article {
       padding-right: 0 !important; } }
 
 body {
-  background-color: none; }
+  background-color: none;
+  overflow-x: hidden; }
   body:before {
     content: "";
     height: 10px;
@@ -94,6 +94,87 @@ nav {
 .text-muted {
   color: #999999; }
 
+.Share a.share {
+  color: #999999;
+  position: relative;
+  padding-left: 1.5em; }
+  .Share a.share:before {
+    content: "\f045";
+    font-family: FontAwesome;
+    position: absolute;
+    left: 0;
+    color: #29abe1; }
+.Share .modal-body a {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 1em; }
+.Share .modal-body a.btn-facebook {
+  background: #3b5998; }
+.Share .modal-body a.btn-twitter {
+  background: #00acee; }
+.Share .modal-body a.btn-linkedin {
+  background: #0e76a8; }
+.Share .modal-body a.btn-email {
+  background: #666666;
+  margin-bottom: 0; }
+
+.rating {
+  color: #999999;
+  padding-left: 1em; }
+  .rating .rating__dot {
+    padding-left: 0.125em;
+    padding-right: 0.125em;
+    color: #29abe1; }
+    .rating .rating__dot:before {
+      content: "\f1db";
+      font-family: FontAwesome; }
+    .rating .rating__dot.fill:before, .rating .rating__dot.rated:before {
+      content: "\f111"; }
+  .rating .rating__count {
+    padding-left: 0.25em; }
+
+.views {
+  color: #999999;
+  padding-left: 1.5em;
+  padding-right: 2em;
+  position: relative; }
+  .views i {
+    display: none; }
+  .views:before {
+    content: "\f06e";
+    font-family: FontAwesome;
+    position: absolute;
+    left: 0;
+    color: #29abe1; }
+
+.likes {
+  color: #999999;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  position: relative; }
+  .likes i {
+    display: none; }
+  .likes:before {
+    content: "\f08a";
+    font-family: FontAwesome;
+    position: absolute;
+    left: 0;
+    color: #29abe1; }
+
+.saves {
+  color: #999999;
+  padding-left: 1.5em;
+  position: relative; }
+  .saves:before {
+    content: "\f234";
+    font-family: FontAwsome;
+    position: absolute;
+    left: 0;
+    color: #29abe1; }
+
 .SearchMenu {
   margin: -15px;
   margin-top: 0px; }
@@ -141,7 +222,7 @@ nav {
         border-radius: 0;
         color: #96bb33;
         display: inline-block;
-        width: auto; }
+        width: 100%; }
   .SearchMenu button {
     margin: 1em;
     background: none;
@@ -151,19 +232,27 @@ nav {
       color: #29abe1;
       background: rgba(41, 171, 225, 0.1); }
 
+@media only screen and (max-width: 768px) {
+  .SearchMenu input.form-control {
+    font-size: 16px; } }
 .SearchPage__result {
-  height: 500px;
+  height: 515px;
   padding-top: .5em;
   transition: .2s all; }
   @media only screen and (max-width: 768px) {
     .SearchPage__result {
       padding-right: 10px;
       padding-left: 0; } }
-  .SearchPage__result div a:first-child {
+  .SearchPage__result .SearchPage__result-badge {
+    color: #96bb33;
+    line-height: 1em;
+    font-size: 1em;
+    font-weight: bold; }
+  .SearchPage__result .SearchPage__result-title {
     color: #333333;
     font-size: 1.5em;
     text-decoration: none; }
-  .SearchPage__result > a {
+  .SearchPage__result .SearchPage__result-recommended-image {
     background-size: cover !important;
     background-position: center;
     min-height: 210px;
@@ -171,37 +260,43 @@ nav {
     margin-bottom: 1em;
     margin-top: .5em;
     background-origin: content-box;
-    max-width: initial !important; }
+    max-width: initial !important;
+    background-repeat: no-repeat; }
   .SearchPage__result:hover {
-    background: rgba(153, 153, 153, 0.05);
-    cursor: pointer; }
+    background: rgba(153, 153, 153, 0.05); }
   .SearchPage__result .SearchPage__result-description {
     height: 100px;
-    overflow: hidden; }
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 5;
+    display: -webkit-box;
+    -webkit-box-orient: vertical; }
   .SearchPage__result .SearchPage__tag-list {
     margin-top: 1em;
     border-top: 1px solid #ebebeb;
-    border-bottom: 1px solid #ebebeb;
-    padding-bottom: 1em; }
-    .SearchPage__result .SearchPage__tag-list:after {
-      content: "Categories ( 9 )";
-      color: #29abe1; }
+    border-bottom: 1px solid #ebebeb; }
+    .SearchPage__result .SearchPage__tag-list ul {
+      list-style: none;
+      padding: 0;
+      padding-top: 1em;
+      color: #0067ab; }
   .SearchPage__result .SearchPage__result-buttons, .SearchPage__result .JourneyPage__buttons-right {
     margin-top: 1em; }
-    .SearchPage__result .SearchPage__result-buttons span:nth-child(1), .SearchPage__result .JourneyPage__buttons-right span:nth-child(1) {
+    .SearchPage__result .SearchPage__result-buttons .SearchPage__views, .SearchPage__result .JourneyPage__buttons-right .SearchPage__views {
       padding-left: 1.5em;
       padding-right: 2em;
       position: relative; }
-      .SearchPage__result .SearchPage__result-buttons span:nth-child(1):before, .SearchPage__result .JourneyPage__buttons-right span:nth-child(1):before {
+      .SearchPage__result .SearchPage__result-buttons .SearchPage__views:before, .SearchPage__result .JourneyPage__buttons-right .SearchPage__views:before {
         content: "\f06e";
         font-family: FontAwesome;
         position: absolute;
         left: 0;
         color: #29abe1; }
-    .SearchPage__result .SearchPage__result-buttons span:nth-child(2), .SearchPage__result .JourneyPage__buttons-right span:nth-child(2) {
+    .SearchPage__result .SearchPage__result-buttons .SearchPage__likes, .SearchPage__result .JourneyPage__buttons-right .SearchPage__likes {
       padding-left: 1.5em;
+      padding-right: 2em;
       position: relative; }
-      .SearchPage__result .SearchPage__result-buttons span:nth-child(2):before, .SearchPage__result .JourneyPage__buttons-right span:nth-child(2):before {
+      .SearchPage__result .SearchPage__result-buttons .SearchPage__likes:before, .SearchPage__result .JourneyPage__buttons-right .SearchPage__likes:before {
         content: "\f08a";
         font-family: FontAwesome;
         position: absolute;
@@ -263,31 +358,6 @@ nav {
     @media only screen and (max-width: 768px) {
       .JourneyPage__buttons .JourneyPage__buttons-right {
         float: left; } }
-    .JourneyPage__buttons .JourneyPage__buttons-right span:nth-child(1) {
-      color: #999999;
-      padding-left: 1.5em;
-      padding-right: 2em;
-      position: relative; }
-      .JourneyPage__buttons .JourneyPage__buttons-right span:nth-child(1) i {
-        display: none; }
-      .JourneyPage__buttons .JourneyPage__buttons-right span:nth-child(1):before {
-        content: "\f06e";
-        font-family: FontAwesome;
-        position: absolute;
-        left: 0;
-        color: #29abe1; }
-    .JourneyPage__buttons .JourneyPage__buttons-right span:nth-child(2) {
-      color: #999999;
-      padding-left: 1.5em;
-      position: relative; }
-      .JourneyPage__buttons .JourneyPage__buttons-right span:nth-child(2) i {
-        display: none; }
-      .JourneyPage__buttons .JourneyPage__buttons-right span:nth-child(2):before {
-        content: "\f08a";
-        font-family: FontAwesome;
-        position: absolute;
-        left: 0;
-        color: #29abe1; }
 
 .JourneyPage__recommended {
   overflow: auto;
@@ -307,6 +377,9 @@ nav {
       margin-bottom: 1em;
       background-size: cover !important;
       background-position: center !important; }
+    .JourneyPage__recommended .JourneyPage__buy .JourneyPage__recommended-price {
+      color: #96bb33;
+      font-size: 1.25em; }
     .JourneyPage__recommended .JourneyPage__buy .JourneyPage__buy-now-button {
       background: #29abe1;
       color: white;
@@ -332,9 +405,15 @@ nav {
       color: #333333;
       font-size: 1.5em;
       display: block; }
-    .JourneyPage__recommended .JourneyPage__info .JourneyPage__recommended-price {
-      color: #96bb33;
-      font-size: 1.25em; }
+    .JourneyPage__recommended .JourneyPage__info .JourneyPage__description {
+      min-height: 200px; }
+    .JourneyPage__recommended .JourneyPage__info .JourneyPage__JourneyTags a {
+      color: #999999;
+      border: 1px solid #999999;
+      border-radius: 1em;
+      padding-left: 0.5em;
+      padding-right: 0.5em;
+      cursor: pointer; }
 
 .panel {
   margin-right: 1em;
@@ -344,29 +423,27 @@ nav {
     box-shadow: none;
     color: #666666; }
 
-.JourneyPage__product {
-  width: 300px;
-  margin: 1em; }
-  .JourneyPage__product .JourneyPage__product-image {
-    width: 100%;
-    height: 120px;
-    margin: auto; }
-  .JourneyPage__product .JourneyPage__product-title {
-    color: #333333;
-    font-size: 1em;
-    line-height: 1em;
-    display: block;
-    padding-top: 1em;
-    padding-bottom: 1em; }
-  .JourneyPage__product .JourneyPage__product-price {
-    color: #96bb33;
-    display: block; }
-  .JourneyPage__product .JourneyPage__product-rating {
-    display: block; }
+.JourneyPage__product .JourneyPage__product-image {
+  width: 100%;
+  height: 120px;
+  margin: auto; }
+.JourneyPage__product .JourneyPage__product-title {
+  color: #333333;
+  font-size: 1em;
+  line-height: 1em;
+  display: block;
+  padding-top: 1em;
+  padding-bottom: 1em; }
+.JourneyPage__product .JourneyPage__product-price {
+  color: #96bb33;
+  display: block; }
+.JourneyPage__product .JourneyPage__product-rating {
+  display: block; }
 
 .JourneyPage__link a {
   display: block; }
-.JourneyPage__link .JourneyPage__link-comment {
+
+.JourneyPage__link-comment {
   color: #666666;
   background: #ebebeb;
   display: inline-block;
@@ -377,7 +454,7 @@ nav {
   margin-bottom: 1em;
   border-radius: 5px;
   position: relative; }
-  .JourneyPage__link .JourneyPage__link-comment:before {
+  .JourneyPage__link-comment:before {
     content: "";
     position: absolute;
     width: 0;
@@ -463,5 +540,16 @@ nav {
     padding: .5em;
     display: block;
     border-top: 2px solid #ebebeb; }
+    .JourneyComponent__Journey footer .JourneyComponent__Journey-publish {
+      float: right;
+      color: #999999;
+      position: relative;
+      padding-left: 1.5em; }
+      .JourneyComponent__Journey footer .JourneyComponent__Journey-publish:before {
+        content: "\f0c7";
+        font-family: FontAwesome;
+        position: absolute;
+        left: 0;
+        color: #29abe1; }
 
 /*# sourceMappingURL=main.css.map */

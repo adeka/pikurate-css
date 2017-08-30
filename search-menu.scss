@@ -53,7 +53,7 @@
                 border-radius: 0;
                 color: $green;
                 display: inline-block;
-                width: auto;
+                width: 100%;
             }
         }
     }
@@ -67,4 +67,12 @@
             background: transparentize($icon-blue, .9);
         }
     }
+}
+
+@media only screen and (max-width: $breakpoint) {
+  .SearchMenu {
+    input.form-control {
+      font-size: 16px;
+    }
+  }
 }
