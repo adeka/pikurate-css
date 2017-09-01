@@ -193,9 +193,10 @@ nav {
         display: block;
         height: 50px;
         position: absolute;
-        z-index: 1;
+        z-index: 1024;
         color: #29abe1;
-        padding: 1em; }
+        padding: 1em;
+        background: white; }
       .SearchMenu fieldset .field:first-child input {
         border: none;
         height: 30px;
@@ -551,5 +552,10 @@ nav {
         position: absolute;
         left: 0;
         color: #29abe1; }
+
+.SearchSidebar {
+  position: sticky;
+  top: 0px;
+  z-index: 1024; }
 
 /*# sourceMappingURL=main.css.map */
