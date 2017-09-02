@@ -87,9 +87,16 @@
             background-size: cover !important;
             background-position: center !important;
         }
+        .JourneyPage__recommended-title {
+            border: none;
+            color: black;
+            font-size: 1.5em;
+        }
         .JourneyPage__recommended-price {
           color: $green;
           font-size: 1.25em;
+          position: relative;
+          top: -15px;
         }
         .JourneyPage__buy-now-button {
             background: $icon-blue;
@@ -126,7 +133,9 @@
         .JourneyPage__JourneyTags {
           a {
             color: $medium-grey;
-            border: 1px solid $medium-grey;
+            border: 1px solid $grey;
+            margin-right: .5em;
+            padding: 3px;
             border-radius: 1em;
             padding-left: 0.5em;
             padding-right: 0.5em;

@@ -2,18 +2,36 @@ header {
     // padding: 1em;
     // background: $grey;
 }
-.AccountPage__photo {
-    display: block;
-    width: 150px;
-    height: 150px;
-    float: left;
-    margin-right: 1em;
+
+.AccountPage__header {
+    overflow: auto;
+    background: $light-grey;
+    margin-left: -1em;
+    padding: 1em;
+
+    .AccountPage__photo {
+        display: block;
+        width: 150px;
+        height: 150px;
+        float: left;
+        margin-right: 1em;
+    }
+    h4 {
+        padding-top: 2em;
+        color: $medium-grey;
+    }
 }
+
 .JourneyComponent__Journey {
     width: 47%;
     float: left;
     border: 2px solid $grey;
     margin: .5em;
+
+    &.published {
+        border-color: #8bb719;
+    }
+
     header {
         display: block;
         border-bottom:  2px solid $grey;

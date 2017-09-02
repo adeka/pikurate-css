@@ -63,12 +63,34 @@ nav {
         border: none !important;
     }
 
+    .MobileSearchButton {
+        @media only screen and (max-width: $breakpoint) {
+            position: absolute;
+            right: 0;
+            top: 3px;
+            width: 40px;
+            height: 40px;
+            &:before {
+                content: "\f002";
+                font-family: FontAwesome;
+                display: block;
+                position: absolute;
+                z-index: 1024;
+                color: white;
+                padding: 11px;
+                font-size: 1.25em;
+            }
+        }
+    }
+
     .navbar-brand {
         @media only screen and (max-width: $breakpoint) {
             background-image: url(https://pikurate.now.sh/static/mobile-logo.png);
             position: absolute;
             left: 48%;
             top: 15px;
+            width: 30px;
+            height: 30px;
         }
         background-image: url(https://pikurate.now.sh/static/pikurate.png);
         width: 200px;

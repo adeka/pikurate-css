@@ -1,6 +1,7 @@
 .SearchPage__result {
-    height: 515px;
-    padding-top: .5em;
+    height: 550px;
+    padding-top: 1em;
+    overflow: hidden;
     @media only screen and (max-width: $breakpoint) {
         padding-right: 10px;
         padding-left: 0;
@@ -10,12 +11,21 @@
       line-height: 1em;
       font-size: 1em;
       font-weight: bold;
+      position: absolute;
+      top: 2px;
     }
     // title
     .SearchPage__result-title {
-        color: $black;
+        color: #333333;
         font-size: 1.5em;
         text-decoration: none;
+        height: 35px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 1;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        padding-top: 3px;
     }
     // image
     .SearchPage__result-recommended-image {
@@ -53,7 +63,7 @@
           list-style: none;
           padding: 0;
           padding-top: 1em;
-          color: $blue;
+          color: $icon-blue;
         }
     }
     // stats
