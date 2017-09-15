@@ -248,3 +248,31 @@ nav {
     color: $icon-blue;
   }
 }
+
+.JourneyTags {
+  a {
+    color: $medium-grey;
+    border: 1px solid $grey;
+    margin-right: .5em;
+    padding: 3px;
+    border-radius: 1em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    cursor: pointer;
+    display: inline-block;
+  }
+}
+
+.JourneySaveButton {
+  border: none;
+  background: none;
+  i {
+    color: $icon-blue;
+    padding-right: .25em;
+  }
+  color: $medium-grey;
+  margin-right: 1em;
+  &:hover {
+    background: transparentize($grey, .5);
+  }
+}

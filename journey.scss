@@ -6,6 +6,16 @@
     padding-right: .3em;
     font: -webkit-control;
     font-size: 1em;
+    max-width: 50%;
+    overflow: hidden;
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: bottom;
+
+    @media only screen and (max-width: $breakpoint) {
+      max-width: 45%;
+    }
 }
 
 .JourneyPage__date {
@@ -40,11 +50,11 @@
             background: white;
             float: none;
             position: absolute;
-            top: 70px;
+            top: 50px;
             right: 20px;
             width: 10%;
-            button {
-                margin-bottom: 1.5em;
+            button, span.Share {
+                margin-bottom: 1em;
                 color: transparent !important;
                 &:hover {
                     background: white !important;
@@ -52,9 +62,17 @@
                         color: lighten($icon-blue, 20%) !important;
                     }
                 }
-                i {
+                i, a:before {
                     font-size: 2em;
                 }
+            }
+            span.Share {
+              position: relative;
+              left: 6px;
+              top: -5px;
+              a {
+                color: transparent !important;
+              }
             }
         }
     }
@@ -129,18 +147,6 @@
         }
         .JourneyPage__description {
           min-height: 200px;
-        }
-        .JourneyPage__JourneyTags {
-          a {
-            color: $medium-grey;
-            border: 1px solid $grey;
-            margin-right: .5em;
-            padding: 3px;
-            border-radius: 1em;
-            padding-left: 0.5em;
-            padding-right: 0.5em;
-            cursor: pointer;
-          }
         }
     }
 }

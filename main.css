@@ -193,6 +193,28 @@ nav {
     left: 0;
     color: #29abe1; }
 
+.JourneyTags a {
+  color: #999999;
+  border: 1px solid #ebebeb;
+  margin-right: .5em;
+  padding: 3px;
+  border-radius: 1em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  cursor: pointer;
+  display: inline-block; }
+
+.JourneySaveButton {
+  border: none;
+  background: none;
+  color: #999999;
+  margin-right: 1em; }
+  .JourneySaveButton i {
+    color: #29abe1;
+    padding-right: .25em; }
+  .JourneySaveButton:hover {
+    background: rgba(235, 235, 235, 0.5); }
+
 .SearchMenu {
   margin: -15px;
   margin-top: 0px; }
@@ -213,7 +235,8 @@ nav {
         position: absolute;
         z-index: 1024;
         color: #29abe1;
-        padding: 1em; }
+        padding: 1em;
+        background: white; }
       .SearchMenu fieldset .field:first-child input {
         border: none;
         height: 30px;
@@ -266,7 +289,7 @@ nav {
     .SearchSidebar.in {
       display: block; } }
 .SearchPage__result {
-  height: 550px;
+  height: 585px;
   padding-top: 1em;
   overflow: hidden;
   transition: .2s all; }
@@ -342,6 +365,15 @@ nav {
         position: absolute;
         left: 0;
         color: #29abe1; }
+  .SearchPage__result .SearchPage__result-subtitle .SearchPage__result-author {
+    max-width: 50%;
+    overflow: hidden;
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: bottom; }
+  .SearchPage__result .JourneyTags {
+    height: 5em; }
 
 .JourneyPage__title {
   font-size: 30px; }
@@ -349,7 +381,16 @@ nav {
 .JourneyPage__author {
   padding-right: .3em;
   font: -webkit-control;
-  font-size: 1em; }
+  font-size: 1em;
+  max-width: 50%;
+  overflow: hidden;
+  display: inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: bottom; }
+  @media only screen and (max-width: 768px) {
+    .JourneyPage__author {
+      max-width: 45%; } }
 
 .JourneyPage__date {
   color: #999999;
@@ -380,18 +421,24 @@ nav {
         background: white;
         float: none;
         position: absolute;
-        top: 70px;
+        top: 50px;
         right: 20px;
         width: 10%; }
-        .JourneyPage__buttons .JourneyPage__buttons-left button {
-          margin-bottom: 1.5em;
+        .JourneyPage__buttons .JourneyPage__buttons-left button, .JourneyPage__buttons .JourneyPage__buttons-left span.Share {
+          margin-bottom: 1em;
           color: transparent !important; }
-          .JourneyPage__buttons .JourneyPage__buttons-left button:hover {
+          .JourneyPage__buttons .JourneyPage__buttons-left button:hover, .JourneyPage__buttons .JourneyPage__buttons-left span.Share:hover {
             background: white !important; }
-            .JourneyPage__buttons .JourneyPage__buttons-left button:hover i {
+            .JourneyPage__buttons .JourneyPage__buttons-left button:hover i, .JourneyPage__buttons .JourneyPage__buttons-left span.Share:hover i {
               color: #82ceee !important; }
-          .JourneyPage__buttons .JourneyPage__buttons-left button i {
-            font-size: 2em; } }
+          .JourneyPage__buttons .JourneyPage__buttons-left button i, .JourneyPage__buttons .JourneyPage__buttons-left button a:before, .JourneyPage__buttons .JourneyPage__buttons-left span.Share i, .JourneyPage__buttons .JourneyPage__buttons-left span.Share a:before {
+            font-size: 2em; }
+        .JourneyPage__buttons .JourneyPage__buttons-left span.Share {
+          position: relative;
+          left: 6px;
+          top: -5px; }
+          .JourneyPage__buttons .JourneyPage__buttons-left span.Share a {
+            color: transparent !important; } }
   .JourneyPage__buttons .JourneyPage__buttons-right {
     float: right;
     padding-right: 1em; }
@@ -453,15 +500,6 @@ nav {
       display: block; }
     .JourneyPage__recommended .JourneyPage__info .JourneyPage__description {
       min-height: 200px; }
-    .JourneyPage__recommended .JourneyPage__info .JourneyPage__JourneyTags a {
-      color: #999999;
-      border: 1px solid #ebebeb;
-      margin-right: .5em;
-      padding: 3px;
-      border-radius: 1em;
-      padding-left: 0.5em;
-      padding-right: 0.5em;
-      cursor: pointer; }
 
 .panel {
   margin-right: 1em;

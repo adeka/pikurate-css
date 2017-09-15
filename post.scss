@@ -1,5 +1,5 @@
 .SearchPage__result {
-    height: 550px;
+    height: 585px;
     padding-top: 1em;
     overflow: hidden;
     @media only screen and (max-width: $breakpoint) {
@@ -93,5 +93,19 @@
                 color: $icon-blue;
             }
         }
+    }
+    // subtitle
+    .SearchPage__result-subtitle {
+      .SearchPage__result-author {
+        max-width: 50%;
+        overflow: hidden;
+        display: inline-block;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        vertical-align: bottom;
+      }
+    }
+    .JourneyTags {
+      height: 5em;
     }
 }
