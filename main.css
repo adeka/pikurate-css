@@ -285,12 +285,13 @@ nav {
     overflow: hidden;
     background: white;
     display: none;
+    top: 50px !important;
     width: 100%; }
     .SearchSidebar.in {
       display: block; } }
 .SearchPage__result {
-  height: 585px;
-  padding-top: 1em;
+  height: 660px;
+  padding-top: 3em;
   overflow: hidden;
   transition: .2s all; }
   @media only screen and (max-width: 768px) {
@@ -300,10 +301,10 @@ nav {
   .SearchPage__result .SearchPage__result-badge {
     color: #96bb33;
     line-height: 1em;
-    font-size: 1em;
+    font-size: .9em;
     font-weight: bold;
     position: absolute;
-    top: 2px; }
+    top: 30px; }
   .SearchPage__result .SearchPage__result-title {
     color: #333333;
     font-size: 1.5em;
@@ -321,7 +322,7 @@ nav {
     min-height: 210px;
     border: 2px solid #ebebeb;
     margin-bottom: 1em;
-    margin-top: .5em;
+    margin-top: 1em;
     background-origin: content-box;
     max-width: initial !important;
     background-repeat: no-repeat; }
@@ -333,7 +334,8 @@ nav {
     text-overflow: ellipsis;
     -webkit-line-clamp: 5;
     display: -webkit-box;
-    -webkit-box-orient: vertical; }
+    -webkit-box-orient: vertical;
+    margin-bottom: 1em; }
   .SearchPage__result .SearchPage__tag-list {
     margin-top: 1em;
     border-top: 1px solid #ebebeb;
@@ -342,12 +344,15 @@ nav {
       list-style: none;
       padding: 0;
       padding-top: 1em;
-      color: #29abe1; }
+      color: #29abe1;
+      margin-bottom: 1em; }
+      .SearchPage__result .SearchPage__tag-list ul li {
+        margin-bottom: 5px; }
   .SearchPage__result .SearchPage__result-buttons, .SearchPage__result .JourneyPage__buttons-right {
     margin-top: 1em; }
     .SearchPage__result .SearchPage__result-buttons .SearchPage__views, .SearchPage__result .JourneyPage__buttons-right .SearchPage__views {
       padding-left: 1.5em;
-      padding-right: 2em;
+      padding-right: 1em;
       position: relative; }
       .SearchPage__result .SearchPage__result-buttons .SearchPage__views:before, .SearchPage__result .JourneyPage__buttons-right .SearchPage__views:before {
         content: "\f06e";
@@ -357,7 +362,7 @@ nav {
         color: #29abe1; }
     .SearchPage__result .SearchPage__result-buttons .SearchPage__likes, .SearchPage__result .JourneyPage__buttons-right .SearchPage__likes {
       padding-left: 1.5em;
-      padding-right: 2em;
+      padding-right: 1em;
       position: relative; }
       .SearchPage__result .SearchPage__result-buttons .SearchPage__likes:before, .SearchPage__result .JourneyPage__buttons-right .SearchPage__likes:before {
         content: "\f08a";
@@ -365,13 +370,20 @@ nav {
         position: absolute;
         left: 0;
         color: #29abe1; }
-  .SearchPage__result .SearchPage__result-subtitle .SearchPage__result-author {
-    max-width: 50%;
-    overflow: hidden;
-    display: inline-block;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    vertical-align: bottom; }
+    .SearchPage__result .SearchPage__result-buttons .rating, .SearchPage__result .JourneyPage__buttons-right .rating {
+      position: absolute;
+      right: 0;
+      bottom: 15px; }
+  .SearchPage__result .SearchPage__result-subtitle {
+    position: relative;
+    top: 2px; }
+    .SearchPage__result .SearchPage__result-subtitle .SearchPage__result-author {
+      max-width: 50%;
+      overflow: hidden;
+      display: inline-block;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      vertical-align: bottom; }
   .SearchPage__result .JourneyTags {
     height: 5em; }
 
@@ -572,10 +584,12 @@ nav {
   width: 47%;
   float: left;
   border: 2px solid #ebebeb;
-  margin: .5em; }
+  margin: .5em;
+  height: 270px; }
   .JourneyComponent__Journey.published {
     border-color: #8bb719; }
   .JourneyComponent__Journey header {
+    position: relative;
     display: block;
     border-bottom: 2px solid #ebebeb;
     padding: 1em;
@@ -583,7 +597,9 @@ nav {
     .JourneyComponent__Journey header .JourneyComponent__Journey-title {
       float: left; }
     .JourneyComponent__Journey header .JourneyComponent__Journey-buttons {
-      float: right; }
+      position: absolute;
+      right: 10px;
+      top: 15px; }
       .JourneyComponent__Journey header .JourneyComponent__Journey-buttons a {
         width: 30px;
         display: inline-block;
@@ -614,7 +630,8 @@ nav {
           padding-left: .5em; }
   .JourneyComponent__Journey section {
     overflow: auto;
-    padding: 1em; }
+    padding: 1em;
+    position: relative; }
     .JourneyComponent__Journey section .JourneyComponent__Journey-photo {
       background-size: cover;
       background-position: center;
@@ -630,8 +647,9 @@ nav {
       .JourneyComponent__Journey section .JourneyComponent__Journey-info span {
         display: block; }
       .JourneyComponent__Journey section .JourneyComponent__Journey-info .JourneyComponent__Journey-created {
-        margin-top: 2em;
-        color: #999999; }
+        color: #999999;
+        position: absolute;
+        bottom: 15px; }
   .JourneyComponent__Journey footer {
     padding: .5em;
     display: block;
@@ -652,5 +670,130 @@ nav {
   position: sticky;
   top: 0px;
   z-index: 1024; }
+  .SearchSidebar .SidebarCategories {
+    padding: 1.5em; }
+    .SearchSidebar .SidebarCategories:not(ul) {
+      border: 2px solid #ebebeb; }
+    .SearchSidebar .SidebarCategories h4 {
+      margin-top: 0;
+      color: #666666;
+      text-transform: uppercase;
+      font-size: 1em;
+      margin-bottom: 1.5em; }
+    .SearchSidebar .SidebarCategories ul {
+      padding: 0; }
+      .SearchSidebar .SidebarCategories ul li {
+        margin-bottom: 1em; }
+
+.main-content .rjsf {
+  padding: 0; }
+  .main-content .rjsf input, .main-content .rjsf textarea {
+    border-radius: 0;
+    box-shadow: none;
+    color: #666666; }
+  .main-content .rjsf .row {
+    position: relative; }
+  .main-content .rjsf .form-group fieldset .form-group {
+    padding: 1em;
+    position: relative;
+    border: 1px solid #ebebeb;
+    border-top: 3px solid #96bb33; }
+    @media only screen and (max-width: 768px) {
+      .main-content .rjsf .form-group fieldset .form-group {
+        padding: 0;
+        border: none; } }
+    .main-content .rjsf .form-group fieldset .form-group fieldset {
+      padding: 0; }
+      .main-content .rjsf .form-group fieldset .form-group fieldset legend {
+        color: #96bb33;
+        margin: -14px;
+        padding-left: 15px;
+        padding-bottom: 10px;
+        margin-bottom: 1em;
+        width: 103%; }
+      .main-content .rjsf .form-group fieldset .form-group fieldset .array-item-list {
+        margin: 0 !important; }
+        .main-content .rjsf .form-group fieldset .form-group fieldset .array-item-list .array-item {
+          border: 1px solid #ebebeb;
+          border-top: 3px solid #96bb33;
+          padding-top: 5em;
+          margin-bottom: 2em;
+          overflow-x: hidden;
+          position: relative; }
+          .main-content .rjsf .form-group fieldset .form-group fieldset .array-item-list .array-item .col-xs-9 {
+            width: 100%; }
+          .main-content .rjsf .form-group fieldset .form-group fieldset .array-item-list .array-item .array-item-toolbox {
+            position: absolute;
+            right: 0; }
+          .main-content .rjsf .form-group fieldset .form-group fieldset .array-item-list .array-item .array-item-remove {
+            position: absolute;
+            right: 0;
+            top: -55px;
+            background: #ebebeb;
+            color: #999999;
+            border-radius: 0;
+            width: 40px;
+            height: 40px;
+            border: none; }
+            .main-content .rjsf .form-group fieldset .form-group fieldset .array-item-list .array-item .array-item-remove:hover {
+              background: #f1f1f1; }
+          .main-content .rjsf .form-group fieldset .form-group fieldset .array-item-list .array-item .array-item-add {
+            margin: 0;
+            float: right;
+            margin-bottom: -2em; }
+            .main-content .rjsf .form-group fieldset .form-group fieldset .array-item-list .array-item .array-item-add button {
+              background: #96bb33;
+              border: none;
+              border-radius: 0; }
+          .main-content .rjsf .form-group fieldset .form-group fieldset .array-item-list .array-item .array-item-move-up, .main-content .rjsf .form-group fieldset .form-group fieldset .array-item-list .array-item .array-item-move-down {
+            display: none; }
+      .main-content .rjsf .form-group fieldset .form-group fieldset .array-item-add {
+        margin: 0;
+        float: right; }
+        .main-content .rjsf .form-group fieldset .form-group fieldset .array-item-add button {
+          background: #96bb33;
+          border: none;
+          border-radius: 0;
+          width: 40px;
+          height: 40px;
+          position: relative;
+          bottom: 10px;
+          float: right; }
+      .main-content .rjsf .form-group fieldset .form-group fieldset .form-group {
+        position: relative;
+        padding: 1em;
+        border: none; }
+        @media only screen and (max-width: 768px) {
+          .main-content .rjsf .form-group fieldset .form-group fieldset .form-group {
+            padding: 0;
+            border: none; } }
+        .main-content .rjsf .form-group fieldset .form-group fieldset .form-group legend {
+          color: #96bb33;
+          padding: .5em;
+          padding-left: .75em;
+          border: none;
+          margin: 0; }
+        .main-content .rjsf .form-group fieldset .form-group fieldset .form-group .form-group {
+          padding: 0;
+          position: relative; }
+        .main-content .rjsf .form-group fieldset .form-group fieldset .form-group label {
+          color: #666666; }
+        .main-content .rjsf .form-group fieldset .form-group fieldset .form-group input, .main-content .rjsf .form-group fieldset .form-group fieldset .form-group textarea {
+          border-radius: 0;
+          box-shadow: none;
+          color: #666666;
+          position: relative; }
+        .main-content .rjsf .form-group fieldset .form-group fieldset .form-group .error-detail {
+          padding: 0;
+          position: relative;
+          display: inline;
+          top: 0px;
+          left: 1.5em; }
+        .main-content .rjsf .form-group fieldset .form-group fieldset .form-group .help-block {
+          position: relative;
+          top: 5px;
+          color: #999999;
+          position: relative;
+          display: inline; }
 
 /*# sourceMappingURL=main.css.map */

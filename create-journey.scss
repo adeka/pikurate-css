@@ -1,0 +1,159 @@
+.main-content .rjsf {
+    input, textarea {
+        border-radius: 0;
+        box-shadow: none;
+        color: $dark-grey;
+    }
+    padding: 0;
+
+    .row {
+        position: relative;
+    }
+    .form-group {
+        fieldset {
+            .form-group {
+                padding: 1em;
+                @media only screen and (max-width: $breakpoint) {
+                    padding: 0;
+                    border: none;
+                }
+                position: relative;
+                border: 1px solid $grey;
+                border-top: 3px solid $green;
+
+                fieldset {
+                    padding: 0;
+                    legend {
+                        color: $green;
+                        margin: -14px;
+                        padding-left: 15px;
+                        padding-bottom: 10px;
+                        margin-bottom: 1em;
+                        width: 103%;
+                    }
+
+                    .array-item-list {
+                        margin: 0 !important;
+                        .array-item {
+                            border: 1px solid $grey;
+                            border-top: 3px solid $green;
+                            padding-top: 5em;
+                            margin-bottom: 2em;
+                            overflow-x: hidden;
+                            position: relative;
+                            .col-xs-9 {
+                                width: 100%;
+                            }
+                            .col-xs-3 {
+                                // width: 0;
+                            }
+                            .array-item-toolbox {
+                                position: absolute;
+                                right: 0;
+                            }
+                            .array-item-remove {
+                                position: absolute;
+                                right: 0;
+                                top: -55px;
+                                background: $grey;
+                                color: $medium-grey;
+                                border-radius: 0;
+                                width: 40px;
+                                height: 40px;
+                                border: none;
+                                &:hover {
+                                    background: $light-grey;
+                                }
+                            }
+                            .array-item-add {
+                                margin: 0;
+                                float: right;
+                                margin-bottom: -2em;
+                                button {
+                                    background: $green;
+                                    border: none;
+                                    border-radius: 0;
+                                }
+                            }
+                            .array-item-move-up, .array-item-move-down {
+                                display: none;
+                            }
+                        }
+                    }
+
+                    .array-item-add {
+                        margin: 0;
+                        float: right;
+                        button {
+                            background: $green;
+                            border: none;
+                            border-radius: 0;
+                            width: 40px;
+                            height: 40px;
+                            position: relative;
+                            bottom: 10px;
+                            float: right;
+                        }
+                    }
+                    // inside the box with green top border
+                    .form-group {
+                        position: relative;
+                        padding: 1em;
+                        border: none;
+                        @media only screen and (max-width: $breakpoint) {
+                            padding: 0;
+                            border: none;
+                        }
+                        legend {
+                            color: $green;
+                            padding: .5em;
+                            padding-left: .75em;
+                            border: none;
+                            margin: 0;
+                        }
+
+                        .form-group {
+                            padding: 0;
+                            position: relative;
+
+                        }
+                        label {
+                            color: $dark-grey;
+                            // position: absolute;
+                            // top: 5px;
+                        }
+                        input, textarea {
+                            // position: absolute;
+                            // left: 100px;
+                            // width: 77.5%;
+                            border-radius: 0;
+                            box-shadow: none;
+                            color: $dark-grey;
+                            position: relative;
+                        }
+                        .error-detail {
+                            padding: 0;
+                            position: relative;
+                            display: inline;
+                            top: 0px;
+                            left: 1.5em;
+                            li {
+                                // width:80%;
+                            }
+                        }
+                        .help-block {
+                            position: relative;
+                            top: 5px;
+                            color: $medium-grey;
+                            position: relative;
+                            display: inline;
+                        }
+                    }
+                    .array-item-list {
+                        // padding: 1em;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -27,12 +27,14 @@ header {
     float: left;
     border: 2px solid $grey;
     margin: .5em;
+    height: 270px;
 
     &.published {
         border-color: #8bb719;
     }
 
     header {
+        position: relative;
         display: block;
         border-bottom:  2px solid $grey;
         padding: 1em;
@@ -41,7 +43,9 @@ header {
             float: left;
         }
         .JourneyComponent__Journey-buttons {
-            float: right;
+            position: absolute;
+            right: 10px;
+            top: 15px;
             a {
                 width: 30px;
                 display: inline-block;
@@ -80,6 +84,7 @@ header {
     section {
         overflow: auto;
         padding: 1em;
+        position: relative;
         .JourneyComponent__Journey-photo {
             // background-image: url(http://via.placeholder.com/300x300) !important;
             background-size: cover;
@@ -99,8 +104,9 @@ header {
                 display: block;
             }
             .JourneyComponent__Journey-created {
-                margin-top: 2em;
                 color: $medium-grey;
+                position: absolute;
+                bottom: 15px;
             }
         }
     }

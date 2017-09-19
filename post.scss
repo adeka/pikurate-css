@@ -1,6 +1,6 @@
 .SearchPage__result {
-    height: 585px;
-    padding-top: 1em;
+    height: 660px;
+    padding-top: 3em;
     overflow: hidden;
     @media only screen and (max-width: $breakpoint) {
         padding-right: 10px;
@@ -9,10 +9,10 @@
     .SearchPage__result-badge {
       color: $green;
       line-height: 1em;
-      font-size: 1em;
+      font-size: .9em;
       font-weight: bold;
       position: absolute;
-      top: 2px;
+      top: 30px;
     }
     // title
     .SearchPage__result-title {
@@ -34,7 +34,7 @@
         min-height: 210px;
         border: 2px solid $grey;
         margin-bottom: 1em;
-        margin-top: .5em;
+        margin-top: 1em;
         background-origin: content-box;
         max-width: initial !important;
         background-repeat: no-repeat;
@@ -53,6 +53,7 @@
         -webkit-line-clamp: 5;
         display: -webkit-box;
         -webkit-box-orient: vertical;
+        margin-bottom: 1em;
     }
     // tags
     .SearchPage__tag-list {
@@ -64,6 +65,10 @@
           padding: 0;
           padding-top: 1em;
           color: $icon-blue;
+          margin-bottom: 1em;
+          li {
+            margin-bottom: 5px;
+          }
         }
     }
     // stats
@@ -71,7 +76,7 @@
         margin-top: 1em;
         .SearchPage__views {
             padding-left: 1.5em;
-            padding-right: 2em;
+            padding-right: 1em;
             position: relative;
             &:before {
                 content: "\f06e";
@@ -83,7 +88,7 @@
         }
         .SearchPage__likes {
           padding-left: 1.5em;
-          padding-right: 2em;
+          padding-right: 1em;
             position: relative;
             &:before {
                 content: "\f08a";
@@ -93,9 +98,16 @@
                 color: $icon-blue;
             }
         }
+        .rating {
+            position: absolute;
+            right: 0;
+            bottom: 15px;
+        }
     }
     // subtitle
     .SearchPage__result-subtitle {
+        position: relative;
+        top: 2px;
       .SearchPage__result-author {
         max-width: 50%;
         overflow: hidden;
