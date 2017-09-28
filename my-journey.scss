@@ -38,9 +38,15 @@ header {
         display: block;
         border-bottom:  2px solid $grey;
         padding: 1em;
-        overflow: auto;
+        overflow: hidden;
         .JourneyComponent__Journey-title {
             float: left;
+        }
+        .JourneyComponent__Journey-title-link {
+          overflow: hidden;
+          width: 85%;
+          text-overflow: ellipsis;
+          white-space: nowrap;
         }
         .JourneyComponent__Journey-buttons {
             position: absolute;

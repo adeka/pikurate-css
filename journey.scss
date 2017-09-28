@@ -79,9 +79,9 @@
 
     .JourneyPage__buttons-right {
         float: right;
-        padding-right: 1em;
         @media only screen and (max-width: $breakpoint) {
-            float: left;
+          float: left;
+          width: 100%;
         }
     }
 }

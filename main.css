@@ -226,7 +226,8 @@ nav {
     .SearchMenu fieldset .field:first-child {
       padding: 0;
       height: 53px;
-      border-bottom: 2px solid #ebebeb; }
+      border-bottom: 2px solid #ebebeb;
+      overflow: hidden; }
       .SearchMenu fieldset .field:first-child:before {
         content: "\f002";
         font-family: FontAwesome;
@@ -452,11 +453,11 @@ nav {
           .JourneyPage__buttons .JourneyPage__buttons-left span.Share a {
             color: transparent !important; } }
   .JourneyPage__buttons .JourneyPage__buttons-right {
-    float: right;
-    padding-right: 1em; }
+    float: right; }
     @media only screen and (max-width: 768px) {
       .JourneyPage__buttons .JourneyPage__buttons-right {
-        float: left; } }
+        float: left;
+        width: 100%; } }
 
 .JourneyPage__recommended {
   overflow: auto;
@@ -593,9 +594,14 @@ nav {
     display: block;
     border-bottom: 2px solid #ebebeb;
     padding: 1em;
-    overflow: auto; }
+    overflow: hidden; }
     .JourneyComponent__Journey header .JourneyComponent__Journey-title {
       float: left; }
+    .JourneyComponent__Journey header .JourneyComponent__Journey-title-link {
+      overflow: hidden;
+      width: 85%;
+      text-overflow: ellipsis;
+      white-space: nowrap; }
     .JourneyComponent__Journey header .JourneyComponent__Journey-buttons {
       position: absolute;
       right: 10px;
