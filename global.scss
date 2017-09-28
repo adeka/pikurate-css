@@ -141,15 +141,23 @@ nav {
 }
 
 .Share {
+  &:hover {
+    background: transparentize($grey, .5);
+  }
+
   a.share {
     color: $medium-grey;
     position: relative;
     padding-left: 1.5em;
     &:before {
-      content: "\f045";
-      font-family: FontAwesome;
+      background-size: cover;
+      content: "";
+      width: 20px;
+      height: 20px;
+      background-image: url(/static/icons/share.png);
       position: absolute;
       left: 0;
+      top: -2px;
       color: $icon-blue;
     }
   }
@@ -211,10 +219,13 @@ nav {
   padding-right: 2em;
   position: relative;
   &:before {
-    content: "\f06e";
-    font-family: FontAwesome;
+    background-image: url(/static/icons/eye.png);
+    background-size: cover;
+    content: "";
     position: absolute;
     left: 0;
+    width: 20px;
+    height: 20px;
     color: $icon-blue;
   }
 }
@@ -228,10 +239,13 @@ nav {
   padding-right: 1.5em;
   position: relative;
   &:before {
-    content: "\f08a";
-    font-family: FontAwesome;
+    background-image: url(/static/icons/heart.png);
+    background-size: cover;
+    content: "";
     position: absolute;
     left: 0;
+    width: 20px;
+    height: 20px;
     color: $icon-blue;
   }
 }
@@ -241,10 +255,13 @@ nav {
   padding-left: 1.5em;
   position: relative;
   &:before {
-    content: "\f234";
-    font-family: FontAwsome;
+    background-image: url(/static/icons/chevron.png);
+    background-size: cover;
+    content: "";
     position: absolute;
     left: 0;
+    width: 20px;
+    height: 20px;
     color: $icon-blue;
   }
 }

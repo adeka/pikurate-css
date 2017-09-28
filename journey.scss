@@ -33,10 +33,12 @@
     position: relative;
     .JourneyPage__buttons-left {
         float: left;
-        button {
+        .JourneySaveButton, .JourneyPage__like, .JourneyPage__flag {
             border: none;
             background: none;
+
             i {
+              display: none;
                 color: $icon-blue;
                 padding-right: .25em;
             }
@@ -45,6 +47,33 @@
             &:hover {
                 background: transparentize($grey, .5);
             }
+            &:before {
+              background-size: cover;
+              content: "";
+              position: relative;
+              left: 0;
+              top: 3px;
+              width: 20px;
+              height: 20px;
+              color: $icon-blue;
+              display: inline-block;
+            }
+        }
+        .JourneySaveButton {
+          &:before {
+            background-image: url(/static/icons/save.png);
+          }
+        }
+        .JourneyPage__like {
+          &:before {
+            background-image: url(/static/icons/heart.png);
+          }
+        }
+        .JourneyPage__flag {
+          display: none;
+          &:before {
+            background-image: url(/static/icons/)
+          }
         }
         @media only screen and (max-width: $breakpoint) {
             background: white;

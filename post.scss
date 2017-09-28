@@ -79,8 +79,7 @@
             padding-right: 1em;
             position: relative;
             &:before {
-                content: "\f06e";
-                font-family: FontAwesome;
+              background-image: url('/static/eye.png');
                 position: absolute;
                 left: 0;
                 color: $icon-blue;

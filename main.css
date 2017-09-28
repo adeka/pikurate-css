@@ -112,15 +112,21 @@ nav {
 .text-muted {
   color: #999999; }
 
+.Share:hover {
+  background: rgba(235, 235, 235, 0.5); }
 .Share a.share {
   color: #999999;
   position: relative;
   padding-left: 1.5em; }
   .Share a.share:before {
-    content: "\f045";
-    font-family: FontAwesome;
+    background-size: cover;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-image: url(/static/icons/share.png);
     position: absolute;
     left: 0;
+    top: -2px;
     color: #29abe1; }
 .Share .modal-body a {
   color: white;
@@ -162,10 +168,13 @@ nav {
   .views i {
     display: none; }
   .views:before {
-    content: "\f06e";
-    font-family: FontAwesome;
+    background-image: url(/static/icons/eye.png);
+    background-size: cover;
+    content: "";
     position: absolute;
     left: 0;
+    width: 20px;
+    height: 20px;
     color: #29abe1; }
 
 .likes {
@@ -176,10 +185,13 @@ nav {
   .likes i {
     display: none; }
   .likes:before {
-    content: "\f08a";
-    font-family: FontAwesome;
+    background-image: url(/static/icons/heart.png);
+    background-size: cover;
+    content: "";
     position: absolute;
     left: 0;
+    width: 20px;
+    height: 20px;
     color: #29abe1; }
 
 .saves {
@@ -187,10 +199,13 @@ nav {
   padding-left: 1.5em;
   position: relative; }
   .saves:before {
-    content: "\f234";
-    font-family: FontAwsome;
+    background-image: url(/static/icons/chevron.png);
+    background-size: cover;
+    content: "";
     position: absolute;
     left: 0;
+    width: 20px;
+    height: 20px;
     color: #29abe1; }
 
 .JourneyTags a {
@@ -356,8 +371,7 @@ nav {
       padding-right: 1em;
       position: relative; }
       .SearchPage__result .SearchPage__result-buttons .SearchPage__views:before, .SearchPage__result .JourneyPage__buttons-right .SearchPage__views:before {
-        content: "\f06e";
-        font-family: FontAwesome;
+        background-image: url("/static/eye.png");
         position: absolute;
         left: 0;
         color: #29abe1; }
@@ -419,16 +433,35 @@ nav {
   position: relative; }
   .JourneyPage__buttons .JourneyPage__buttons-left {
     float: left; }
-    .JourneyPage__buttons .JourneyPage__buttons-left button {
+    .JourneyPage__buttons .JourneyPage__buttons-left .JourneySaveButton, .JourneyPage__buttons .JourneyPage__buttons-left .JourneyPage__like, .JourneyPage__buttons .JourneyPage__buttons-left .JourneyPage__flag {
       border: none;
       background: none;
       color: #999999;
       margin-right: 1em; }
-      .JourneyPage__buttons .JourneyPage__buttons-left button i {
+      .JourneyPage__buttons .JourneyPage__buttons-left .JourneySaveButton i, .JourneyPage__buttons .JourneyPage__buttons-left .JourneyPage__like i, .JourneyPage__buttons .JourneyPage__buttons-left .JourneyPage__flag i {
+        display: none;
         color: #29abe1;
         padding-right: .25em; }
-      .JourneyPage__buttons .JourneyPage__buttons-left button:hover {
+      .JourneyPage__buttons .JourneyPage__buttons-left .JourneySaveButton:hover, .JourneyPage__buttons .JourneyPage__buttons-left .JourneyPage__like:hover, .JourneyPage__buttons .JourneyPage__buttons-left .JourneyPage__flag:hover {
         background: rgba(235, 235, 235, 0.5); }
+      .JourneyPage__buttons .JourneyPage__buttons-left .JourneySaveButton:before, .JourneyPage__buttons .JourneyPage__buttons-left .JourneyPage__like:before, .JourneyPage__buttons .JourneyPage__buttons-left .JourneyPage__flag:before {
+        background-size: cover;
+        content: "";
+        position: relative;
+        left: 0;
+        top: 3px;
+        width: 20px;
+        height: 20px;
+        color: #29abe1;
+        display: inline-block; }
+    .JourneyPage__buttons .JourneyPage__buttons-left .JourneySaveButton:before {
+      background-image: url(/static/icons/save.png); }
+    .JourneyPage__buttons .JourneyPage__buttons-left .JourneyPage__like:before {
+      background-image: url(/static/icons/heart.png); }
+    .JourneyPage__buttons .JourneyPage__buttons-left .JourneyPage__flag {
+      display: none; }
+      .JourneyPage__buttons .JourneyPage__buttons-left .JourneyPage__flag:before {
+        background-image: url(/static/icons/); }
     @media only screen and (max-width: 768px) {
       .JourneyPage__buttons .JourneyPage__buttons-left {
         background: white;
