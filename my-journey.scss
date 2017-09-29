@@ -23,14 +23,15 @@ header {
 }
 
 .JourneyComponent__Journey {
-    width: 47%;
-    float: left;
-    border: 2px solid $grey;
-    margin: .5em;
-    height: 270px;
+  height: 270px;
+  padding: 0.5em;
 
-    &.published {
+    .wrapper {
+      border: 2px solid $grey;
+
+      &.published {
         border-color: #8bb719;
+      }
     }
 
     header {

@@ -615,13 +615,12 @@ nav {
     color: #999999; }
 
 .JourneyComponent__Journey {
-  width: 47%;
-  float: left;
-  border: 2px solid #ebebeb;
-  margin: .5em;
-  height: 270px; }
-  .JourneyComponent__Journey.published {
-    border-color: #8bb719; }
+  height: 270px;
+  padding: 0.5em; }
+  .JourneyComponent__Journey .wrapper {
+    border: 2px solid #ebebeb; }
+    .JourneyComponent__Journey .wrapper.published {
+      border-color: #8bb719; }
   .JourneyComponent__Journey header {
     position: relative;
     display: block;
