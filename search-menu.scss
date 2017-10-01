@@ -1,6 +1,7 @@
 .SearchMenu {
     margin: -15px;
     margin-top: 0px;
+    margin-bottom: 0px;
 
     .form-group {
         margin: 0;
@@ -73,6 +74,9 @@
             background: transparentize($icon-blue, .9);
         }
     }
+    p {
+      margin: 0;
+    }
 }
 
 @media only screen and (max-width: $breakpoint) {
@@ -83,7 +87,7 @@
   }
   .SearchSidebar {
       position: fixed !important;
-      overflow: hidden;
+      overflow: auto;
       background: white;
       display: none;
       top: 50px !important;

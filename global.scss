@@ -293,3 +293,26 @@ nav {
     background: transparentize($grey, .5);
   }
 }
+
+.search-overlay {
+  background: grey;
+  opacity: 0;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 100;
+
+  &.show {
+    opacity: 0.7;
+  }
+}
+
+.container-fluid {
+  &.search-showing {
+    position: fixed;
+
+    .main-content {
+      pointer-events: none;
+    }
+  }
+}

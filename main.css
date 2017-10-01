@@ -231,9 +231,25 @@ nav {
   .JourneySaveButton:hover {
     background: rgba(235, 235, 235, 0.5); }
 
+.search-overlay {
+  background: grey;
+  opacity: 0;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 100; }
+  .search-overlay.show {
+    opacity: 0.7; }
+
+.container-fluid.search-showing {
+  position: fixed; }
+  .container-fluid.search-showing .main-content {
+    pointer-events: none; }
+
 .SearchMenu {
   margin: -15px;
-  margin-top: 0px; }
+  margin-top: 0px;
+  margin-bottom: 0px; }
   .SearchMenu .form-group {
     margin: 0; }
   .SearchMenu fieldset {
@@ -292,6 +308,8 @@ nav {
     .SearchMenu button:hover {
       color: #29abe1;
       background: rgba(41, 171, 225, 0.1); }
+  .SearchMenu p {
+    margin: 0; }
 
 @media only screen and (max-width: 768px) {
   .SearchMenu input.form-control {
@@ -299,7 +317,7 @@ nav {
 
   .SearchSidebar {
     position: fixed !important;
-    overflow: hidden;
+    overflow: auto;
     background: white;
     display: none;
     top: 50px !important;
