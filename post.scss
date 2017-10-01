@@ -2,9 +2,18 @@
     height: 660px;
     padding-top: 3em;
     overflow: hidden;
+
+
     @media only screen and (max-width: $breakpoint) {
         padding-right: 10px;
         padding-left: 0;
+        &:first-of-type {
+          padding-top: 1.5em;
+
+          .SearchPage__result-badge {
+            top: 10px;
+          }
+        }
     }
     .SearchPage__result-badge {
       color: $green;

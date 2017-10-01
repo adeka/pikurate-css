@@ -301,9 +301,11 @@ nav {
   width: 100vw;
   position: fixed;
   z-index: 100;
+  display: none;
 
   &.show {
     opacity: 0.7;
+    display: block;
   }
 }
 

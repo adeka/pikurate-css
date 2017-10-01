@@ -53,8 +53,8 @@
               position: relative;
               left: 0;
               top: 3px;
-              width: 20px;
-              height: 20px;
+              width: 30px;
+              height: 25px;
               color: $icon-blue;
               display: inline-block;
             }
@@ -97,10 +97,15 @@
             }
             span.Share {
               position: relative;
-              left: 6px;
+              left: 7px;
               top: -5px;
               a {
                 color: transparent !important;
+
+                &:before {
+                  width: 30px;
+                  height: 25px;
+                }
               }
             }
         }

@@ -237,9 +237,11 @@ nav {
   height: 100vh;
   width: 100vw;
   position: fixed;
-  z-index: 100; }
+  z-index: 100;
+  display: none; }
   .search-overlay.show {
-    opacity: 0.7; }
+    opacity: 0.7;
+    display: block; }
 
 .container-fluid.search-showing {
   position: fixed; }
@@ -322,7 +324,7 @@ nav {
     display: none;
     top: 50px !important;
     width: 100%;
-    max-height: 85vh; }
+    max-height: 75vh; }
     .SearchSidebar.in {
       display: block; } }
 .SearchPage__result {
@@ -333,7 +335,11 @@ nav {
   @media only screen and (max-width: 768px) {
     .SearchPage__result {
       padding-right: 10px;
-      padding-left: 0; } }
+      padding-left: 0; }
+      .SearchPage__result:first-of-type {
+        padding-top: 1.5em; }
+        .SearchPage__result:first-of-type .SearchPage__result-badge {
+          top: 10px; } }
   .SearchPage__result .SearchPage__result-badge {
     color: #96bb33;
     line-height: 1em;
@@ -470,8 +476,8 @@ nav {
         position: relative;
         left: 0;
         top: 3px;
-        width: 20px;
-        height: 20px;
+        width: 30px;
+        height: 25px;
         color: #29abe1;
         display: inline-block; }
     .JourneyPage__buttons .JourneyPage__buttons-left .JourneySaveButton:before {
@@ -501,10 +507,13 @@ nav {
             font-size: 2em; }
         .JourneyPage__buttons .JourneyPage__buttons-left span.Share {
           position: relative;
-          left: 6px;
+          left: 7px;
           top: -5px; }
           .JourneyPage__buttons .JourneyPage__buttons-left span.Share a {
-            color: transparent !important; } }
+            color: transparent !important; }
+            .JourneyPage__buttons .JourneyPage__buttons-left span.Share a:before {
+              width: 30px;
+              height: 25px; } }
   .JourneyPage__buttons .JourneyPage__buttons-right {
     float: right; }
     @media only screen and (max-width: 768px) {
