@@ -321,7 +321,8 @@ nav {
     background: white;
     display: none;
     top: 50px !important;
-    width: 100%; }
+    width: 100%;
+    max-height: 85vh; }
     .SearchSidebar.in {
       display: block; } }
 .SearchPage__result {
